@@ -29,12 +29,31 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('package.json'),
+      this.destinationPath('package.json')
     );
-  },
-
-  install: function () {
-    this.installDependencies();
+    this.fs.copy(
+      this.templatePath('webpack.config.js'),
+      this.destinationPath('webpack.config.js')
+    );
+    this.fs.copy(
+      this.templatePath('.babelrc'),
+      this.destinationPath('.babelrc')
+    );
+    this.fs.copy(
+      this.templatePath('server.js'),
+      this.destinationPath('server.js')
+    );
+    this.fs.copy(
+      this.templatePath('src'),
+      this.destinationPath('src')
+    );
   }
+
+  // install: function () {
+  //   this.log(yosay(
+  //     process.cwd()
+  //   ));
+  //   this.installDependencies();
+  // }
 });
