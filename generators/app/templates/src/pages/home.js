@@ -50,6 +50,19 @@ class Home extends Component {
     let styles = this.getStyles(),
         { feed } = this.props
 
+    let tableRow = feed.entry.map((item, idx) => {
+      return <TableRow key={`row_${idx}`}>
+              <TableRowColumn>{idx + 1}</TableRowColumn>
+              <TableRowColumn>
+                <img src={item['im:image'][0]['label']}/>
+              </TableRowColumn>
+              <TableRowColumn>
+                {item['im:name']['label']}
+              </TableRowColumn>
+              <TableRowColumn>{item['category']['attributes']['label']}</TableRowColumn>
+            </TableRow>
+    })
+
     return <div style={styles.root}>
       <h2>Home</h2>
 
@@ -63,19 +76,7 @@ class Home extends Component {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {feed.entry.map((item, idx) => {
-
-            return <TableRow key={`row_${idx}`}>
-              <TableRowColumn>{idx + 1}</TableRowColumn>
-              <TableRowColumn>
-                <img src={item['im:image'][0]['label']}/>
-              </TableRowColumn>
-              <TableRowColumn>
-                {item['im:name']['label']}
-              </TableRowColumn>
-              <TableRowColumn>{item['category']['attributes']['label']}</TableRowColumn>
-            </TableRow>
-          })}
+          {tableRow}
         </TableBody>
       </Table>
      

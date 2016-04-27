@@ -5,7 +5,6 @@ var webpack = require('webpack'),
 
 module.exports = {
   entry: {
-    'login': './src/login',
     'index':  [
       './src/index',
     ]

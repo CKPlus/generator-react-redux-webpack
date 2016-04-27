@@ -13,6 +13,9 @@ import Home from './pages/home'
 const AppRoutes = (
   <Route path="/" component={Application}>
     <IndexRoute component={Home} />
+    <Route path="home">
+      <Route component={Home}/>
+    </Route>
   </Route>
 );
 
