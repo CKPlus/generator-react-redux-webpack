@@ -91,6 +91,7 @@ class Sidebar extends Component {
         >
           <div style={this.getStyles().menuSubHeader}>Sidebar</div>
           <ListItem primaryText="Home" value="/home"/>
+          <ListItem primaryText="Information" value="/info"/>
         </SelectableList>
       </LeftNav>
     );

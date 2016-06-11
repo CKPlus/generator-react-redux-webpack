@@ -14,11 +14,6 @@ const {
   TableBody
 } = mui;
 
-
-let loadFrequencyCaps = (props) => {
-  props.dispatch(frequencycapActions.getFrequencyCaps())
-}
-
 class Home extends Component {
 
   static propTypes = {
@@ -50,7 +45,7 @@ class Home extends Component {
     let styles = this.getStyles(),
         { feed } = this.props
 
-    let tableRow = feed.entry.map((item, idx) => {
+    let tableRow = feed.entry ? feed.entry.map((item, idx) => {
       return <TableRow key={`row_${idx}`}>
               <TableRowColumn>{idx + 1}</TableRowColumn>
               <TableRowColumn>
@@ -61,7 +56,7 @@ class Home extends Component {
               </TableRowColumn>
               <TableRowColumn>{item['category']['attributes']['label']}</TableRowColumn>
             </TableRow>
-    })
+    }) : []
 
     return <div style={styles.root}>
       <h2>Home</h2>
