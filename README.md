@@ -25,6 +25,12 @@ Then generate your new project:
 yo react-redux-webpack
 ```
 
+Install npm modules
+
+```bash
+npm install
+```
+
 Run webpack dev server
 
 ```bash
