@@ -17,10 +17,6 @@ function fetchTopalbums(login) {
 
 export function load(login, requiredFields = []) {
   return (dispatch, getState) => {
-    // const user = getState().entities.users[login]
-    // if (user && requiredFields.every(key => user.hasOwnProperty(key))) {
-    //   return null
-    // }
     return dispatch(fetchTopalbums())
   }
 }
