@@ -75,7 +75,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: './index.html',
       template: './src/index.template_dev.html',
-      favicon: './src/images/favicon.ico',
+      // favicon: './src/images/favicon.ico',
       chunks: ['index'],
     }),
     /* You can use jquery if you need it
