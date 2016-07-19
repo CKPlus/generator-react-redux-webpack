@@ -1,5 +1,4 @@
-# generator-react-redux-webpack [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> 
+# generator-react-redux-webpack [![NPM version][npm-image]][npm-url]
 
 ## Installation
 
@@ -14,6 +13,12 @@ Then generate your new project:
 
 ```bash
 yo react-redux-webpack
+```
+
+Run webpack dev server
+
+```bash
+npm run dist
 ```
 
 ## Getting To Know Yeoman
