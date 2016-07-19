@@ -6,6 +6,7 @@ Scaffold out a front-end web app with React-Redux
 
 * React
 * React-Redux example
+* [Material-UI](http://www.material-ui.com/#/)
 * Webpack
 * Built-in preview server with LiveReload
 
