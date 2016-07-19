@@ -34,7 +34,7 @@ npm install
 Run webpack dev server
 
 ```bash
-npm run dist
+npm run start
 ```
 
 ## Getting To Know Yeoman
