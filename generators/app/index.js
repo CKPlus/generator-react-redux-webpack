@@ -29,31 +29,22 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     this.fs.copy(
-      this.templatePath('package.json'),
-      this.destinationPath('package.json')
+      this.templatePath('react-redux-webpack'),
+      this.destinationPath('react-redux-webpack')
     );
     this.fs.copy(
-      this.templatePath('webpack.config.js'),
-      this.destinationPath('webpack.config.js')
+      this.templatePath('react-redux-webpack/.babelrc'),
+      this.destinationPath('react-redux-webpack/.babelrc')
     );
-    this.fs.copy(
-      this.templatePath('.babelrc'),
-      this.destinationPath('.babelrc')
-    );
-    this.fs.copy(
-      this.templatePath('server.js'),
-      this.destinationPath('server.js')
-    );
-    this.fs.copy(
-      this.templatePath('src'),
-      this.destinationPath('src')
-    );
-  }
+  },
 
   // install: function () {
   //   this.log(yosay(
   //     process.cwd()
   //   ));
-  //   this.installDependencies();
+  //   this.installDependencies({
+  //     'bower': false,
+  //     'npm': true
+  //   });
   // }
 });

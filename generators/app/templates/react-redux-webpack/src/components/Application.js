@@ -55,7 +55,7 @@ class Application extends Component {
                     targetOrigin={{horizontal: 'right', vertical: 'top'}}
                     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
                   >
-                    <MenuItem primaryText="Logout"/>
+                    <MenuItem primaryText="Settings"/>
                   </IconMenu>
                 }
                 showMenuIconButton={false} />
