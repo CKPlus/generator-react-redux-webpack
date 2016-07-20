@@ -28,7 +28,10 @@ module.exports = {
       }
     }),
     new webpack.DefinePlugin({
-      '__DEVTOOLS__': false
+      '__DEVTOOLS__': false,
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production'),
+       },
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
